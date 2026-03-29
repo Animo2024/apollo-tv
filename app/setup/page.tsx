@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Zap, Tv, Flame, Smartphone, Apple, Box, Monitor, Radio, ChevronDown, ChevronUp, MessageCircle } from "lucide-react"
+import { Tv, Flame, Smartphone, Apple, Box, Monitor, Radio, ChevronDown, ChevronUp, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
@@ -152,7 +152,7 @@ function DeviceCard({ device }: { device: typeof devices[0] }) {
                 </div>
                 <div>
                   <p className="font-medium text-foreground text-sm">{step.title}</p>
-                  <p className="text-muted-foreground text-sm mt-0.5 leading-relaxed whitespace-pre-line">{step.desc}</p>
+                  <p className="text-muted-foreground text-sm mt-0.5 leading-relaxed break-words overflow-hidden">{step.desc}</p>
                 </div>
               </li>
             ))}

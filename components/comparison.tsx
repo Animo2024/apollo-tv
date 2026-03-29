@@ -52,16 +52,16 @@ export function Comparison() {
         </h3>
 
         <div className="overflow-x-auto rounded-2xl border border-border mb-14">
-          <table className="w-full text-sm">
+          <table className="w-full text-xs sm:text-sm">
             <thead>
               <tr className="border-b border-border">
-                <th className="text-left px-5 py-4 text-foreground font-semibold w-1/2">
+                <th className="text-left px-2 sm:px-5 py-3 sm:py-4 text-foreground font-semibold w-1/2">
                   Feature
                 </th>
-                <th className="px-5 py-4 text-center font-bold text-primary">
+                <th className="px-2 sm:px-5 py-3 sm:py-4 text-center font-bold text-primary">
                   Apollo TV IPTV
                 </th>
-                <th className="px-5 py-4 text-center font-semibold text-muted-foreground">
+                <th className="px-2 sm:px-5 py-3 sm:py-4 text-center font-semibold text-muted-foreground">
                   Other Providers
                 </th>
               </tr>
@@ -72,19 +72,19 @@ export function Comparison() {
                   key={row.label}
                   className={i % 2 === 0 ? "bg-card/30" : "bg-background"}
                 >
-                  <td className="px-5 py-3.5 text-muted-foreground font-medium">
+                  <td className="px-2 sm:px-5 py-2 sm:py-3.5 text-muted-foreground font-medium">
                     {row.label}
                   </td>
-                  <td className="px-5 py-3.5 text-center">
-                    <span className="inline-flex items-center gap-1.5 text-green-400 font-medium">
-                      <Check className="w-4 h-4 flex-shrink-0" />
-                      {row.apollo.replace("✓ ", "")}
+                  <td className="px-2 sm:px-5 py-2 sm:py-3.5 text-center">
+                    <span className="inline-flex items-center gap-1 sm:gap-1.5 text-green-400 font-medium">
+                      <Check className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                      <span className="hidden sm:inline">{row.apollo.replace("✓ ", "")}</span>
                     </span>
                   </td>
-                  <td className="px-5 py-3.5 text-center">
-                    <span className="inline-flex items-center gap-1.5 text-red-400 font-medium">
-                      <X className="w-4 h-4 flex-shrink-0" />
-                      {row.others}
+                  <td className="px-2 sm:px-5 py-2 sm:py-3.5 text-center">
+                    <span className="inline-flex items-center gap-1 sm:gap-1.5 text-red-400 font-medium">
+                      <X className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                      <span className="hidden sm:inline">{row.others}</span>
                     </span>
                   </td>
                 </tr>

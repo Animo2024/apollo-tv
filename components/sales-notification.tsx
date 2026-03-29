@@ -104,7 +104,7 @@ export function SalesNotification({
         key={current.name + indexRef.current}
         className={`fixed bottom-6 left-4 z-50 ${visible ? "sales-popup-enter" : "sales-popup-exit"}`}
       >
-        <div className="flex items-center gap-3 bg-card border border-border rounded-xl shadow-xl px-4 py-3 max-w-[300px] w-full">
+        <div className="flex items-center gap-3 bg-card border border-border rounded-xl shadow-xl px-3 py-3 max-w-[280px] sm:max-w-[300px] w-full">
           {/* Avatar */}
           {current.avatar ? (
             <img

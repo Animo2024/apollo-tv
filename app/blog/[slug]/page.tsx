@@ -77,7 +77,7 @@ const mdxComponents = {
     <code className="bg-secondary text-primary px-1.5 py-0.5 rounded text-sm font-mono" {...props} />
   ),
   pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
-    <pre className="bg-secondary rounded-xl p-4 overflow-x-auto mb-4 text-sm font-mono" {...props} />
+    <pre className="bg-secondary rounded-xl p-2 sm:p-4 overflow-x-auto mb-4 text-xs sm:text-sm font-mono" {...props} />
   ),
   table: (props: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="overflow-x-auto mb-6">
