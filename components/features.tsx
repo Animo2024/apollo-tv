@@ -42,7 +42,7 @@ export function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
+              className="bg-card/50 border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="w-7 h-7 text-primary" />

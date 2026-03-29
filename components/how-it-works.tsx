@@ -47,7 +47,7 @@ export function HowItWorks() {
                 <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary/50 to-primary/20" />
               )}
               
-              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300">
+              <div className="relative bg-card/50 border border-border rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
                   Step {step.number}

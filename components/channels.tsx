@@ -219,9 +219,7 @@ export function Channels() {
           display: flex;
           width: max-content;
           animation: marquee 300s linear infinite;
-          will-change: transform;
-          transform: translateZ(0);
-          backface-visibility: hidden;
+          contain: layout style;
         }
       `}</style>
 

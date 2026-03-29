@@ -129,7 +129,7 @@ export function Pricing() {
             <div
               key={plan.name + plan.duration}
               className={cn(
-                "relative bg-card/50 backdrop-blur-sm border rounded-2xl p-6 flex flex-col transition-all duration-300 hover:scale-105",
+                "relative bg-card/50 border rounded-2xl p-6 flex flex-col transition-all duration-300 hover:scale-105",
                 plan.popular
                   ? "border-primary shadow-lg shadow-primary/20"
                   : "border-border hover:border-primary/50"

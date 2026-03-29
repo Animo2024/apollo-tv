@@ -13,16 +13,11 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
+          <span className="inline-flex rounded-full h-2 w-2 bg-primary"></span>
           <span className="text-sm text-primary font-medium">#1 Apollo Group IPTV Service in 2026</span>
         </div>
 
@@ -59,7 +54,7 @@ export function Hero() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors"
+              className="bg-card/80 border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors"
             >
               <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
               <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>

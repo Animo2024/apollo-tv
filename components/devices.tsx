@@ -28,7 +28,7 @@ export function Devices() {
           {devices.map((device) => (
             <div
               key={device.name}
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all duration-300 group"
+              className="bg-card/50 border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all duration-300 group"
             >
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <device.icon className="w-8 h-8 text-primary" />
