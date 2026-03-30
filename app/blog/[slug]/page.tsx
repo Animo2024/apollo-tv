@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
@@ -9,7 +10,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { EmailButton } from "@/components/email-button"
-import { PostBanner } from "@/components/post-banner"
+import { ShareButtons } from "@/components/share-buttons"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -181,13 +182,25 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Featured Banner */}
-        <PostBanner title={post.title} category={post.category} readTime={post.readTime} className="mb-10" />
+        {/* Featured Image */}
+        <div className="mb-10 rounded-2xl overflow-hidden">
+          <Image
+            src={`/blog/${slug}.png`}
+            alt={post.title}
+            width={1200}
+            height={630}
+            className="w-full h-auto object-cover"
+            priority
+          />
+        </div>
 
         {/* MDX Content */}
         <article className="prose-sm max-w-none">
           <MDXRemote source={post.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </article>
+
+        {/* Share Buttons */}
+        <ShareButtons url={`https://apollotviptv.com/blog/${slug}`} title={post.title} />
 
         {/* CTA */}
         <div className="mt-14 p-6 bg-primary/10 border border-primary/20 rounded-2xl text-center">
