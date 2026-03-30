@@ -42,9 +42,9 @@ function StatCard({ icon: Icon, value, suffix, label, decimals = 0, active }: {
 }) {
   const count = useCountUp(value, 2000, decimals, active)
   return (
-    <div className="flex flex-col items-center gap-2 p-6 rounded-2xl border border-border bg-card/50 hover:border-primary/50 transition-colors">
+    <div className="flex flex-col items-center gap-2 p-3 sm:p-6 rounded-2xl border border-border bg-card/50 hover:border-primary/50 transition-colors">
       <Icon className="w-8 h-8 text-primary mb-1" />
-      <div className="text-4xl font-bold text-foreground">
+      <div className="text-2xl sm:text-4xl font-bold text-foreground">
         {decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString()}{suffix}
       </div>
       <div className="text-sm text-muted-foreground">{label}</div>

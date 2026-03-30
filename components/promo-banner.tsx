@@ -34,7 +34,7 @@ export function PromoBanner() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
           <div className="flex items-center gap-2">
             <Percent className="w-5 h-5 text-primary-foreground" />
-            <span className="text-primary-foreground font-bold text-lg">
+            <span className="text-primary-foreground font-bold text-sm sm:text-lg">
               LIMITED TIME OFFER: 40% OFF
             </span>
           </div>
@@ -60,7 +60,7 @@ export function PromoBanner() {
 function TimeBlock({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex items-center gap-0.5">
-      <span className="bg-primary-foreground/20 rounded px-2 py-1 text-lg font-bold">
+      <span className="bg-primary-foreground/20 rounded px-1.5 sm:px-2 py-1 text-sm sm:text-lg font-bold">
         {value}
       </span>
       <span className="text-xs">{label}</span>

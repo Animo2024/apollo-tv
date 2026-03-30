@@ -22,7 +22,7 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
+        <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
           Apollo TV IPTV — #1 Rated
           <span className="block text-primary">IPTV Subscription 2026</span>
         </h1>

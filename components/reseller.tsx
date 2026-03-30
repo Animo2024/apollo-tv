@@ -75,7 +75,7 @@ export function Reseller() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-base sm:text-lg px-5 sm:px-8 py-5 sm:py-6 w-full sm:w-auto"
           >
             <Link
               href="https://wa.me/212622892003?text=I%20want%20to%20Become%20an%20apollo%20iptv%20Reseller%20program"
@@ -83,7 +83,7 @@ export function Reseller() {
               rel="noopener noreferrer"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Become an Apollo IPTV Reseller Program
+              Become an Apollo IPTV Reseller
             </Link>
           </Button>
           <p className="text-sm text-muted-foreground mt-4">
