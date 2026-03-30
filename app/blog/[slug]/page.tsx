@@ -23,17 +23,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug)
   if (!post) return {}
   return {
-    title: `${post.title} | Apollo TV IPTV Blog`,
+    title: `${post.title} | Apollo TV IPTV`,
     description: post.description,
+    ...(post.keywords ? { keywords: post.keywords } : {}),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     alternates: { canonical: `https://apollotviptv.com/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
       url: `https://apollotviptv.com/blog/${slug}`,
       siteName: "Apollo TV IPTV",
+      locale: "en_US",
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.date,
       authors: [post.author],
+      section: post.category,
+      tags: post.keywords?.split(",").map((k) => k.trim()) ?? [],
       images: [{ url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {

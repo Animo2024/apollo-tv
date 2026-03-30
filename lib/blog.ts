@@ -12,6 +12,7 @@ export interface PostMeta {
   author: string
   category: string
   readTime: string
+  keywords?: string
 }
 
 export interface Post extends PostMeta {
