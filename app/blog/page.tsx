@@ -27,18 +27,41 @@ export const metadata: Metadata = {
   },
 }
 
+const blogJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://apollotviptv.com/blog",
+      name: "Apollo TV IPTV Blog",
+      url: "https://apollotviptv.com/blog",
+      description: "IPTV guides, setup tutorials, reviews, and tips for Apollo TV IPTV subscribers.",
+      publisher: { "@type": "Organization", name: "Apollo TV IPTV", url: "https://apollotviptv.com" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://apollotviptv.com" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://apollotviptv.com/blog" },
+      ],
+    },
+  ],
+}
+
 export default function BlogPage() {
   const posts = getAllPosts()
 
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
       <Header />
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         {/* Hero */}
         <div className="text-center mb-14">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-            Apollo TV <span className="text-primary">Website (Official Guide 2026)</span>
+            Apollo TV IPTV <span className="text-primary">Guides & Reviews (2026)</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             IPTV guides, setup tutorials, reviews, and tips to get the most from your subscription.

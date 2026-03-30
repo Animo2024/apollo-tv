@@ -109,14 +109,30 @@ export default async function BlogPostPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    author: { "@type": "Organization", name: post.author },
-    publisher: { "@type": "Organization", name: "Apollo TV IPTV", url: "https://apollotviptv.com" },
-    url: `https://apollotviptv.com/blog/${slug}`,
-    mainEntityOfPage: `https://apollotviptv.com/blog/${slug}`,
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: { "@type": "Organization", name: post.author, url: "https://apollotviptv.com" },
+        publisher: { "@type": "Organization", name: "Apollo TV IPTV", url: "https://apollotviptv.com" },
+        url: `https://apollotviptv.com/blog/${slug}`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://apollotviptv.com/blog/${slug}` },
+        image: { "@type": "ImageObject", url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630 },
+        inLanguage: "en-US",
+        isPartOf: { "@type": "Blog", "@id": "https://apollotviptv.com/blog", name: "Apollo TV IPTV Blog" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://apollotviptv.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://apollotviptv.com/blog" },
+          { "@type": "ListItem", position: 3, name: post.title, item: `https://apollotviptv.com/blog/${slug}` },
+        ],
+      },
+    ],
   }
 
   return (

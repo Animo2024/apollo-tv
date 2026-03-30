@@ -18,6 +18,7 @@ import { EmailButton } from "@/components/email-button"
 import { CookieConsent } from "@/components/cookie-consent"
 import { BackToTop } from "@/components/back-to-top"
 import { SalesNotification } from "@/components/sales-notification"
+import { LatestGuides } from "@/components/latest-guides"
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <HowItWorks />
       <Reseller />
       <FAQ />
+      <LatestGuides />
       <Footer />
       <WhatsAppButton />
       <EmailButton />
