@@ -116,9 +116,9 @@ export function Comparison() {
           <Button
             asChild
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto"
           >
-            <Link href="#pricing">
+            <Link href="/#pricing">
               Start Your Apollo TV IPTV Subscription Today
             </Link>
           </Button>
