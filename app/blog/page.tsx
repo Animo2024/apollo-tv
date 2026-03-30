@@ -38,7 +38,7 @@ export default function BlogPage() {
         {/* Hero */}
         <div className="text-center mb-14">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-            Apollo TV <span className="text-primary">Blog</span>
+            Apollo TV <span className="text-primary">Website (Official Guide 2026)</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             IPTV guides, setup tutorials, reviews, and tips to get the most from your subscription.
