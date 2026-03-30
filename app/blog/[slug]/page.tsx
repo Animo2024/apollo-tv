@@ -9,6 +9,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { EmailButton } from "@/components/email-button"
+import { PostBanner } from "@/components/post-banner"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -179,6 +180,9 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* Featured Banner */}
+        <PostBanner title={post.title} category={post.category} readTime={post.readTime} className="mb-10" />
 
         {/* MDX Content */}
         <article className="prose-sm max-w-none">
