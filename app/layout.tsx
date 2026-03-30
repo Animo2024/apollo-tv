@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Apollo TV IPTV | #1 IPTV Subscription — 40,000+ Channels',
   description: 'Apollo TV IPTV — 40,000+ live channels, 100,000+ VODs, 4K streaming, instant activation & 24/7 support. Best IPTV subscription in 2026. Try free trial today.',
   keywords: 'apollo iptv subscription, apollo group iptv, apollo iptv service, apollo tv firestick, apollo iptv channels, iptv subscription 2026',
+  verification: { google: 'GTWrXznqC1SLBOwRAyorB6dnHbOjL61wIqFKwk8MvMk' },
   metadataBase: new URL('https://apollotviptv.com'),
   alternates: { canonical: 'https://apollotviptv.com' },
   openGraph: {
