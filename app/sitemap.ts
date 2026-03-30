@@ -8,8 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogUrls: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${base}/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: "weekly",
-    priority: 0.8,
+    changeFrequency: "monthly",
+    priority: 0.7,
   }))
 
   return [
@@ -17,8 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/setup`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     ...blogUrls,
-    { url: `${base}/terms`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/refund`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/terms`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/refund`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
   ]
 }

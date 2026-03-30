@@ -12,8 +12,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Apollo TV IPTV | #1 IPTV Subscription — 40,000+ Channels',
-  description: 'Apollo TV IPTV — 40,000+ live channels, 100,000+ VODs, 4K streaming, instant activation & 24/7 support. Best IPTV subscription in 2026. Try free trial today.',
+  description: 'Apollo TV IPTV — 40,000+ live channels, 100,000+ VODs, 4K streaming, instant activation & 24/7 support. Best IPTV subscription in 2026.',
   keywords: 'apollo iptv subscription, apollo group iptv, apollo iptv service, apollo tv firestick, apollo iptv channels, iptv subscription 2026',
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   verification: { google: 'GTWrXznqC1SLBOwRAyorB6dnHbOjL61wIqFKwk8MvMk' },
   metadataBase: new URL('https://apollotviptv.com'),
   alternates: { canonical: 'https://apollotviptv.com' },
@@ -52,12 +53,19 @@ const jsonLd = {
       "@id": "https://apollotviptv.com/#organization",
       name: "Apollo TV IPTV",
       url: "https://apollotviptv.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://apollotviptv.com/logo.png",
+        width: 240,
+        height: 96,
+      },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+212622892003",
         contactType: "customer support",
         availableLanguage: ["English", "Arabic", "French"],
       },
+      sameAs: ["https://apollotviptv.com"],
     },
     {
       "@type": "WebSite",

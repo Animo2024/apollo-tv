@@ -10,18 +10,21 @@ import { EmailButton } from "@/components/email-button"
 export const metadata: Metadata = {
   title: "Apollo TV IPTV Blog — Tips, Guides & IPTV News",
   description: "Read the latest IPTV guides, setup tutorials, and tips from the Apollo TV team. Learn how to get the most from your IPTV subscription.",
+  keywords: "iptv guides, apollo tv setup, iptv tips 2026, apollo iptv blog, best iptv service guides",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   alternates: { canonical: "https://apollotviptv.com/blog" },
   openGraph: {
     title: "Apollo TV IPTV Blog — Tips, Guides & IPTV News",
     description: "IPTV guides, setup tutorials, and tips from the Apollo TV team.",
     url: "https://apollotviptv.com/blog",
     siteName: "Apollo TV IPTV",
+    locale: "en_US",
     type: "website",
-    images: [{ url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630, alt: "Apollo TV IPTV Blog" }],
+    images: [{ url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630, alt: "Apollo TV IPTV Blog — Guides & Reviews" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apollo TV IPTV Blog",
+    title: "Apollo TV IPTV Blog — Tips, Guides & IPTV News",
     description: "IPTV guides, setup tutorials, and tips from the Apollo TV team.",
     images: ["https://apollotviptv.com/og-image.png"],
   },
