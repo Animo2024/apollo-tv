@@ -4,6 +4,8 @@ import { Calendar, Clock, Tag, ArrowRight } from "lucide-react"
 import { getAllPosts } from "@/lib/blog"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { EmailButton } from "@/components/email-button"
 
 export const metadata: Metadata = {
   title: "Apollo TV IPTV Blog — Tips, Guides & IPTV News",
@@ -88,6 +90,8 @@ export default function BlogPage() {
       </main>
 
       <Footer />
+      <WhatsAppButton />
+      <EmailButton />
     </div>
   )
 }

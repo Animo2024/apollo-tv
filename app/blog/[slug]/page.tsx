@@ -6,6 +6,8 @@ import { MDXRemote } from "next-mdx-remote/rsc"
 import { getAllPosts, getPostBySlug } from "@/lib/blog"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { EmailButton } from "@/components/email-button"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -171,6 +173,8 @@ export default async function BlogPostPage({ params }: Props) {
       </main>
 
       <Footer />
+      <WhatsAppButton />
+      <EmailButton />
     </div>
   )
 }
