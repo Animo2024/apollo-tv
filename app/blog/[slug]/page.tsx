@@ -55,15 +55,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+function slugify(text: React.ReactNode): string {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+}
+
 const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className="text-3xl font-bold text-foreground mt-8 mb-4" {...props} />
   ),
-  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className="text-2xl font-semibold text-foreground mt-8 mb-3 pb-2 border-b border-border" {...props} />
+  h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 id={slugify(children)} className="scroll-mt-24 text-2xl font-semibold text-foreground mt-8 mb-3 pb-2 border-b border-border" {...props}>{children}</h2>
   ),
-  h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3 className="text-xl font-semibold text-foreground mt-6 mb-2" {...props} />
+  h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h3 id={slugify(children)} className="scroll-mt-24 text-xl font-semibold text-foreground mt-6 mb-2" {...props}>{children}</h3>
   ),
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p className="text-muted-foreground leading-relaxed mb-4" {...props} />
