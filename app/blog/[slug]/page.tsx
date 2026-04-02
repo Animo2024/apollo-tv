@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
+import fs from "fs"
+import path from "path"
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
@@ -115,6 +117,9 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
+  const imagePath = path.join(process.cwd(), "public", "blog", `${slug}.jpg`)
+  const hasImage = fs.existsSync(imagePath)
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -183,16 +188,18 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Featured AI Image */}
-        <div className="mb-10 rounded-2xl overflow-hidden border border-border">
-          <Image
-            src={`/blog/${slug}.jpg`}
-            alt={`${post.title} — Apollo TV IPTV`}
-            width={1200}
-            height={630}
-            className="w-full h-auto object-cover"
-            priority
-          />
-        </div>
+        {hasImage && (
+          <div className="mb-10 rounded-2xl overflow-hidden border border-border">
+            <Image
+              src={`/blog/${slug}.jpg`}
+              alt={`${post.title} — Apollo TV IPTV`}
+              width={1200}
+              height={630}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        )}
 
         {/* MDX Content */}
         <article className="prose-sm max-w-none">
