@@ -26,6 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
+  const hasArticleImage = fs.existsSync(path.join(process.cwd(), "public", "blog", `${slug}.jpg`))
+  const ogImage = hasArticleImage
+    ? `https://apollotviptv.com/blog/${slug}.jpg`
+    : "https://apollotviptv.com/og-image.png"
   return {
     title: `${post.title} | Apollo TV IPTV`,
     description: post.description,
@@ -44,13 +48,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [post.author],
       section: post.category,
       tags: post.keywords?.split(",").map((k) => k.trim()) ?? [],
-      images: [{ url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["https://apollotviptv.com/og-image.png"],
+      images: [ogImage],
     },
   }
 }
@@ -127,6 +131,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   const imagePath = path.join(process.cwd(), "public", "blog", `${slug}.jpg`)
   const hasImage = fs.existsSync(imagePath)
+  const schemaImage = hasImage
+    ? `https://apollotviptv.com/blog/${slug}.jpg`
+    : "https://apollotviptv.com/og-image.png"
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -141,7 +148,7 @@ export default async function BlogPostPage({ params }: Props) {
         publisher: { "@type": "Organization", name: "Apollo TV IPTV", url: "https://apollotviptv.com" },
         url: `https://apollotviptv.com/blog/${slug}`,
         mainEntityOfPage: { "@type": "WebPage", "@id": `https://apollotviptv.com/blog/${slug}` },
-        image: { "@type": "ImageObject", url: "https://apollotviptv.com/og-image.png", width: 1200, height: 630 },
+        image: { "@type": "ImageObject", url: schemaImage, width: 1200, height: 630 },
         inLanguage: "en-US",
         isPartOf: { "@type": "Blog", "@id": "https://apollotviptv.com/blog", name: "Apollo TV IPTV Blog" },
       },
