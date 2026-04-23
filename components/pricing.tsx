@@ -46,7 +46,7 @@ const plans = [
   {
     name: "12 Months Plan",
     duration: "12 Months",
-    price: "$99",
+    price: "$89",
     period: "/ 1 Year",
     popular: true,
     waMessage: "Hello%2C%20I%20want%20to%20subscribe%20for%201%20Year",

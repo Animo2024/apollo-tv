@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "How much does an Apollo subscription cost per month?",
-    answer: "Apollo TV subscription starts at $18 per month for the 1 Month Plan. We also offer longer plans at better value: 3 Months for $45, 6 Months for $65, and 12 Months for $99. All plans include full access to 40,000+ channels and 100,000+ VODs.",
+    answer: "Apollo TV subscription starts at $18 per month for the 1 Month Plan. We also offer longer plans at better value: 3 Months for $45, 6 Months for $65, and 12 Months for $89. All plans include full access to 40,000+ channels and 100,000+ VODs.",
   },
   {
     question: "What movies and series does Apollo TV offer?",
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     question: "How much is the Apollo Group TV subscription?",
-    answer: "Apollo Group TV subscription plans range from $18/month up to $99/year. We offer flexible plans to fit any budget, with longer subscriptions providing the best value per month.",
+    answer: "Apollo Group TV subscription plans range from $18/month up to $89/year. We offer flexible plans to fit any budget, with longer subscriptions providing the best value per month.",
   },
   {
     question: "Can I pay for Apollo TV with a credit card?",
